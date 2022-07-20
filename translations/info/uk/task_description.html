@@ -1,0 +1,50 @@
+<!-- Describe task in general -->
+
+<p>
+    У вас є список каменів різної ваги. Результатом удару по двох каменях буде новий камінь з різницею ваги між двома каменями.
+</p>
+
+<p style="text-align: center;">
+    <img  title="example" src="{{MEDIA}}example.png" alt="example" style="max-width: 600px"/>
+</p>
+
+<p>
+    Ваша мета - знайти вагу останнього каменя. Якщо каменів не залишилося, результат 0.
+</p>
+
+<p>
+     Алгоритм дуже простий:
+</p>
+<ul>
+     <li>отримайте два найбільші камені в партії</li>
+     <li>вдарити та отримати новий камінь</li>
+     <li>помістіть отриманий камінь назад у партію.</li>
+</ul>
+
+<p><i>Для категорії Speedy ви можете подумати про своє рішення за мільйон каменів</i></p>
+
+<!-- Explain input and output values -->
+<p>
+    <strong>Вхідні: </strong> Список каменів як {% if is_js %}array of integers{% else %}list of ints{% endif %}
+</p>
+
+<p>
+    <strong>Вихідні: </strong> Int. 
+</p>
+
+
+<!-- Give some usage examples -->
+<div class="for_info_only">
+    <p>
+        <strong>Приклад:</strong>
+    </p>
+
+<pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
+
+
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<p>
+    <strong>Передумова:</strong>
+    <i>тільки позитивні, ненульові значення. Список каменів може бути порожнім</i>
+</p>

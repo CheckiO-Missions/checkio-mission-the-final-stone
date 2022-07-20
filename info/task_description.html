@@ -1,16 +1,31 @@
 <!-- Describe task in general -->
 
 <p>
-    Sum two passed ints
+    You have a list of stones with different weights. The result of hitting two stones will be a new stone with a weight difference between the two stones.
 </p>
 
 <p style="text-align: center;">
-    <img  title="example" src="{{MEDIA}}example.png" alt="example" style="max-height: 83px"/>
+    <img  title="example" src="{{MEDIA}}example.png" alt="example" style="max-width: 600px"/>
 </p>
+
+<p>
+    Your goal is to find the weight of the final stone. If no stones left, the result is 0.
+</p>
+
+<p>
+    The algorith is very simple:
+</p>
+<ul>
+    <li>get the two biggest stones in the batch</li>
+    <li>hit and get the resulting stone</li>
+    <li>put the resulting stone back in the batch.</li>
+</ul>
+
+<p><i>For the Speedy category, you can think about your solution for a million stones</i></p>
 
 <!-- Explain input and output values -->
 <p>
-    <strong>Input: </strong> Two arguments. Both are ints.
+    <strong>Input: </strong> List of stones as {% if is_js %}an array of integers{% else %}list of ints{% endif %}
 </p>
 
 <p>
@@ -26,17 +41,10 @@
 
 <pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
 
-<!-- Here you can explain how it can be used in development -->
-<!-- The section is optional -->
-<p class="for_info_only">
-
-    <strong>How it’s used: </strong>
-    <i>(math is used everywhere)</i>
-</p>
 
 <!-- Here you can explain some constraints for input-->
 <!-- The section is optional -->
 <p>
     <strong>Precondition:</strong>
-    <i>both given ints should be between -1000 and 1000</i>
+    <i>only positive, non-zero values. The list of stones can be empty</i>
 </p>
